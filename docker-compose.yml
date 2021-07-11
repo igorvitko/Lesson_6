@@ -5,6 +5,7 @@ services:
     build: .
     volumes:
       - ./:/blog.app
+    env_file: .env
   nginx:
     build:
       context: .

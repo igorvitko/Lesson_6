@@ -8,7 +8,8 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
-ENV FLASK_APP=app_blog.py
+# ENV FLASK_APP=app_blog.py
 ENV FLASK_ENV=development
 
-CMD ["flask", "run", "-h", "0.0.0.0", "-p", "8000"]
+CMD ["gunicorn", "app_blog:app", "-b", "0.0.0.0:8000"]
+# CMD ["flask", "run", "-h", "0.0.0.0", "-p", "8000"]
