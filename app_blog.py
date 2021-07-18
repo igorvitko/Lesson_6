@@ -3,7 +3,7 @@ from datetime import datetime
 
 from flask import Flask, redirect, request, render_template
 
-app = Flask(__name__)
+app = Flask(___name__)
 
 
 def connect_db():
