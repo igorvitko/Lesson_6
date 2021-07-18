@@ -1,6 +1,7 @@
-from datetime import datetime
-from flask import Flask, render_template, request, redirect
 import sqlite3
+from datetime import datetime
+
+from flask import Flask, redirect, request, render_template
 
 app = Flask(__name__)
 
@@ -183,7 +184,3 @@ def del_post():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
